@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "contacts-book"
+version = "0.1.0"
+description = ""
+authors = ["Oleksii Hladkov <agladkoff17@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.104.1"
+uvicorn = {extras = ["standard"], version = "^0.24.0.post1"}
+sqlalchemy = "^2.0.23"
+psycopg2 = "^2.9.9"
+alembic = "^1.13.0"
+pydantic = {extras = ["email"], version = "^2.5.2"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
