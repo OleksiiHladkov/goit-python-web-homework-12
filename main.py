@@ -3,11 +3,12 @@ from pydantic import BaseModel
 from sqlalchemy import text
 from sqlalchemy.orm import Session
 
-from contacts_book.routes import contacts
+from contacts_book.routes import contacts, auth
 from contacts_book.database.db import get_db
 
 app = FastAPI()
 
+app.include_router(auth.router, prefix='/api')
 app.include_router(contacts.router, prefix='/api')
 
 
